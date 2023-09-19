@@ -1,0 +1,639 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 10px 40px;
+  min-height: 40px;
+  align-items: center;
+}
+
+header .header__logo {
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+header a {
+  margin: 0px 10px;
+  text-decoration: none;
+  color: grey;
+}
+
+header a:focus,
+header a:hover,
+footer a:focus,
+footer a:hover {
+  color: #555;
+  font-weight: bold;
+}
+
+/* footer */
+footer {
+  background-color: #f2f2f2;
+  min-height: 40px;
+  padding: 20px 40px;
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer a {
+  text-decoration: none;
+  color: grey;
+}
+
+.footer__theme-btn {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+/* post navigation */
+.post__navigation {
+  display: flex;
+  gap: 12px;
+  margin: 0 auto;
+  max-width: 680px;
+  font-size: 16px;
+  color: grey;
+  cursor: pointer;
+  padding: 48px 20px 0px 20px;
+}
+
+.post__navigation--active {
+  color: #555;
+  font-weight: 600;
+}
+
+/* post list, post detail */
+.post__list,
+.post__detail {
+  min-height: 90vh;
+  padding: 20px;
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 24px;
+}
+
+.post__list a {
+  text-decoration: none;
+  color: #111;
+}
+
+.post__box {
+  padding: 24px 0;
+  border-top: 1px solid #f2f2f2;
+}
+
+.post__profile-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #777;
+}
+
+.post__profile {
+  width: 36px;
+  height: 36px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+.post__date,
+.post__author-name {
+  color: grey;
+}
+
+.post__title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 14px 0;
+}
+
+.post__text {
+  color: dimgray;
+  font-size: 16px;
+}
+
+.post__utils-box {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  color: grey;
+}
+
+.post__edit:focus,
+.post__edit:hover,
+.post__edit a:focus,
+.post__edit a:hover,
+.post__delete:focus,
+.post__delete:hover,
+.form__link:focus,
+.form__link:hover,
+.profile__logout:focus,
+.profile__logout:hover {
+  color: black;
+}
+
+.post__delete {
+  cursor: pointer;
+}
+
+/* post Detail */
+.post__detail .post__title {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.post__detail .post__utils-box {
+  padding: 10px 10px;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px 0;
+}
+
+.post__detail .post__profile-box {
+  padding: 10px 0;
+}
+
+.post__detail .post__text {
+  padding: 20px 10px;
+}
+
+.post__utils-box .post__edit {
+  color: gray;
+  text-decoration: none;
+}
+.post__utils-box .post__edit a:hover {
+  color: black;
+}
+.post__edit a {
+  text-decoration: none;
+  color: gray;
+}
+
+.post__no-post {
+  padding: 100px 24px;
+  text-align: center;
+  color: gray;
+}
+
+.post__text--pre-wrap {
+  white-space: pre-wrap;
+}
+
+.post__category {
+  color: gray;
+  border: 1px solid #c0c0c0;
+  background-color: #f8f8f8;
+  padding: 0px 10px;
+  border-radius: 10px;
+  margin-right: 5px;
+  font-size: 12px;
+}
+/* profile */
+.profile__box {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-size: 18px;
+  margin: 0 auto;
+  max-width: 680px;
+  text-align: left;
+  line-height: 24px;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.flex__box-lg {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.profile__image {
+  width: 72px;
+  height: 72px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+.profile__name {
+  font-size: 16px;
+  padding-top: 4px;
+}
+
+.profile__email {
+  font-weight: 500;
+}
+
+.profile__logout {
+  color: gray;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* carousel */
+
+.carousel {
+  margin: 0 auto;
+  max-width: 100vw;
+  height: 500px;
+  overflow: hidden;
+}
+
+ul.carousel__slides {
+  display: block;
+  position: relative;
+  height: 500px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+}
+
+.carousel__slides * {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+ul.carousel__slides input {
+  display: none;
+}
+
+.carousel__slide-container {
+  display: block;
+}
+
+.carousel__slide-img {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+
+.carousel__slide-img img {
+  width: auto;
+  min-width: 100%;
+  height: 100%;
+}
+
+.carousel__controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  font-size: 100px;
+  line-height: 400px;
+  color: #fff;
+}
+
+.carousel__controls label {
+  display: none;
+  position: absolute;
+  padding: 0 20px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.carousel__slide-img:hover + .carousel__controls label {
+  opacity: 0.5;
+}
+
+.carousel__controls label:hover {
+  opacity: 1;
+}
+
+.carousel__controls .carousel__slide-prev {
+  width: 49%;
+  text-align: left;
+  left: 0;
+}
+
+.carousel__controls .carousel__slide-next {
+  width: 49%;
+  text-align: right;
+  right: 0;
+}
+
+.carousel__dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 40px;
+  z-index: 999;
+  text-align: center;
+}
+
+.carousel__dots .carousel__dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+  margin: 10px;
+}
+
+input:checked + .carousel__slide-container .carousel__slide-img {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s ease-in-out;
+}
+
+input:checked + .carousel__slide-container .carousel__controls label {
+  display: block;
+}
+
+input#img-1:checked ~ .carousel__dots label#img-dot-1,
+input#img-2:checked ~ .carousel__dots label#img-dot-2,
+input#img-3:checked ~ .carousel__dots label#img-dot-3 {
+  opacity: 1;
+}
+
+input:checked + .carousel__slide-container .nav label {
+  display: block;
+}
+
+/* PostForm */
+.form {
+  margin: 0 auto;
+  max-width: 680px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.form input {
+  height: 20px;
+  padding: 10px 10px;
+  font-size: 16px;
+  border-radius: 0.3rem;
+  border: 1px solid lightgray;
+  width: 96%;
+  max-width: 680px;
+}
+.form textarea {
+  min-height: 400px;
+  padding: 10px 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  border: 1px solid lightgray;
+  width: 96%;
+  max-width: 680px;
+}
+
+.form .form__block {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.form .form__btn--submit {
+  width: 100%;
+  height: 48px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #2562eb;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.form .form__btn--submit:hover,
+.form .form__btn--submit:focus {
+  background-color: #1e57dd;
+}
+
+/* login form */
+.form--lg {
+  min-height: 70vh;
+  margin-top: 10vh;
+}
+
+.form__title {
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.form__link {
+  margin-left: 10px;
+  text-decoration: none;
+  color: gray;
+}
+
+.form__error {
+  color: red;
+}
+
+.form select {
+  border: 1px solid lightgrey;
+  max-width: 680px;
+  height: 40px;
+  padding: 0px 20px;
+  border-radius: 0.3rem;
+}
+
+/* loader */
+
+.loader {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 5px solid #2563eb;
+  border-radius: 50%;
+  z-index: 9999;
+  animation: rotation 1s linear infinite;
+}
+
+/* Comments */
+
+.comments {
+  width: 100%;
+}
+
+.comments__form label {
+  font-weight: 600;
+  display: block;
+  margin: 20px 0 10px;
+}
+
+.comments__form textarea {
+  min-height: 100px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  border: 1px solid lightgray;
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.comments__form .form__block {
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.comments__form .form__btn-submit {
+  width: 100px;
+  height: 36px;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: #2562eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.comments__form .form__btn-submit:hover,
+.comments__form .form__btn-submit:focus {
+  background-color: #3d77f6;
+}
+
+.form__block-right {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.comments__list {
+  margin: 40px 0px 100px;
+}
+
+.comment__box {
+  padding: 12px 0px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.comment__profile-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.comment__email {
+  font-weight: 500;
+}
+
+.comment__date {
+  color: gray;
+}
+
+.comment__delete {
+  color: gray;
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.comment__delete:hover,
+.comment__delete:focus {
+  color: black;
+}
+
+.comment__text {
+  font-size: 14px;
+  padding-top: 4px;
+}
+/* dark mode  */
+
+.white {
+  transition: all 0.25s linear;
+  background-color: white;
+}
+
+.dark {
+  transition: all 0.25s linear;
+  background-color: #1e2937;
+  min-height: 100vh;
+}
+
+.dark a,
+.dark .form label,
+.dark .post__delete,
+.dark .profile__logout,
+.dark .form__title,
+.dark .post__navigation--active,
+.dark .post__title,
+.dark .post__author-name,
+.dark .footer__theme-btn,
+.dark .profile__name,
+.dark .comments__list,
+.dark .comment__delete:hover,
+.dark .comment__delete:focus,
+.dark .comments__list {
+  color: white;
+}
+
+.dark a:hover,
+.dark a:focus,
+.dark .post__text,
+.dark .post__text--pre-wrap,
+.dark .profile__email,
+.dark .post__date,
+.dark .form__block,
+.dark .comment__date,
+.dark .comment__delete,
+.dark .comment__date {
+  color: lightgray;
+}
+
+.dark .form__error {
+  color: #ff6a71;
+}
+
+.dark footer,
+.dark header {
+  background-color: #111827;
+}
